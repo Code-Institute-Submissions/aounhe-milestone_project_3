@@ -5,4 +5,4 @@ from filmmanager.models import Film, Review, Users
 
 @app.route("/")
 def home():
-    return render_template("base.html")
+    return render_template("index.html")
