@@ -16,3 +16,7 @@ def films():
 def add_review():
     return render_template("add_review.html")
 
+@app.route("/add_review", methods=["GET", "POST"])
+def add_review():
+    return render_template("add_review.html")
+
