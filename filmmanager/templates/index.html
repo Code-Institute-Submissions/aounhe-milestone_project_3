@@ -2,8 +2,78 @@
 
 {% block content %}
 
+<!--Index html-->
+<h3 class="brown-text text-darken-4 center-align">
+    Thousands of movies to discover</h3>
+<h4 class="#1b5e20  darken-4 center-align">Trending Now</h4>
+<div class="body">
+    <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <div class="sequence">
+            <!---draggable img-->
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ePquoeNxJ6vg8U7iSjRAZ2KdztX.jpg"
+                alt="The Hunger Games: The Ballad of Songbirds & Snakes (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8xV47NDrjdZDpkVcCFqkdHa3T0C.jpg"
+                alt="Aquaman and the Lost Kingdom (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/tlcuhdNMKNGEVpGqBZrAaOOf1A6.jpg"
+                alt="Silent Night (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/jLLtx3nTRSLGPAKl4RoIv1FbEBr.jpg"
+                alt="The Family Plan (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qhb1qOilapbapxWQn9jtRCMwXJF.jpg"
+                alt="Wonka (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/exNtEY8QUuQh9e23wSQjkPxKIU3.jpg"
+                alt="Chicken Run: Dawn of the Nugget (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg"
+                alt="Oppenheimer (2023)" draggable="false">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/7Bd4EUOqQDKZXA6Od5gkfzRNb0.jpg"
+                alt="Freelance (2023)" draggable="false">
+        </div>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+</div>
 
-<!--Index html -->
-<h3 class="brown-text text-darken-4 center-align">Millions of movies to discover</h3>
+<div class="container">
+    <div class="row">
+        <div class="popular col s6">
+            <h5>Deciding what to watch next?</h5>
+            <p>You’re in the right place. Full movie library <a href="{{url_for('films')}}">here</a></p>
+        </div>
+        <div class="popular col s6">
+            <h5>Join Today</h5>
+            <p>
+                Get access to maintain your own custom personal lists, track what you've seen and search and filter for
+                what to watch
+                next regardless if it's in theatres, on TV or available on popular streaming services like Netflix,
+                Disney Plus, Amazon
+                Prime Video, Apple TV Plus, and Crunchyroll <a href="{{url_for('signup')}}">here</a>.
+            </p>
 
-{% endblock %}
+        </div>
+    </div>
+</div>
+<!--what's popular-->
+<h4 class="#1b5e20  darken-4 center-align">What's Popular</h4>
+<div class="container">
+    <div class="row">
+
+        <div class="popular col s12 m6 l6">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+                alt="The Super Mario Bros. Movie (2023)r" draggable="false">
+        </div>
+        <div class="popular col s12 m6 l6">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/1Bc9VNd9CIHIyJtPKFqSQzrXWru.jpg"
+                alt="The Grinch (2018)" draggable="false">
+        </div>
+        <div class="popular col s12 m6 l6">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/gPbM0MK8CP8A174rmUwGsADNYKD.jpg"
+                alt="Transformers: Rise of the Beasts (2023)" draggable="false">
+        </div>
+        <div class="popular col s12 m6 l6">
+            <img src="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
+                alt="John Wick: Chapter 4 (2023)" draggable="false">
+        </div>
+
+    </div>
+</div>
+    <script src="{{ url_for('static', filename='js/films.js')}}"></script>
+    {% endblock %}

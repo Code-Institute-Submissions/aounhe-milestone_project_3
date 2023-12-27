@@ -2,8 +2,50 @@
       display: flex;
       min-height: 100vh;
       flex-direction: column;
+      background-color: rgb(185, 207, 219);
   }
 
   main {
       flex: 1 0 auto;
+      font-family: "comfortaa", Arial, Helvetica, sans-serif;
   }
+
+  h3 {
+      margin-bottom: 33px;
+  }
+
+  h4 {
+      margin-bottom: 33px;
+  }
+
+  /*images film*/
+  .wrapper .sequence {
+      white-space: nowrap;
+      font-size: 0px;
+      cursor: pointer;
+      overflow: hidden;
+      scroll-behavior: smooth;
+  }
+
+  .sequence.dragging {
+      cursor: grab;
+      scroll-behavior: auto;
+  }
+
+  .sequence.dragging img {
+      pointer-events: none;
+  }
+
+  .sequence img {
+      height: 560px;
+      width: calc(100%/3);
+      object-fit: cover;
+      margin-left: 14px;
+  }
+
+  .sequence img:first-child {
+      margin-left: 0px;
+  }
+   .popular img {
+       height: 420px;
+   }
