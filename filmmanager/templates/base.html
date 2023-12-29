@@ -18,25 +18,33 @@
             <a href="{{url_for('home')}}" class="brand-logo">Film Manager</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{url_for('home')}}">Home</a></li>
+            
+                <li><a class="nav-style" href="{{url_for('home')}}">Home</a></li>
                 <li><a class="nav-style" href="{{url_for('films')}}">Films</a></li>
-            <li><a class="profile-user" href="{{url_for('profile')}}">Profile</a></li>
-            <li><a href="{{url_for('signup')}}">Log in/Sign Up</a></li>
-                
-               
-                
-               
-                
-                
+                <!--if the user log in the it will show profile and logout-->
+                {% if session.get('logged_in') %}
+                <li><a class="nav-style" href="{{url_for('profile')}}">Profile</a></li>
+                <li><a class="nav-style" href="{{url_for('logout')}}">Log out</a></li>
+                {% else %}
+                <!-- if the user clicks logout profile and logout will disappear-->
+                <li><a class="nav-style" href="{{url_for('signup')}}">Log in/Sign Up</a></li>
+                {% endif %}
             </ul>
+        
         </div>
         </nav>
     
     <!--Mobile Sidenav-->
-    <ul class="sidenav" id="mobile-demo">
-        <li><a href="{{url_for('home')}}">Home</a></li>
-        
-    </ul>
+   <ul class="sidenav" id="mobile-demo">
+            <li><a class="mobile-style" href="{{url_for('home')}}">Home</a></li>
+            <li><a class="mobile-style" href="{{url_for('films')}}">Films</a></li>
+            {% if session.get['logged_in'] %}
+            <li><a class="mobile-style" href="{{url_for('profile')}}">Profile</a></li>
+            <li><a class="mobile-style" href="{{url_for('logout')}}">Log out</a></li>
+            {% else %}
+            <li><a class="mobile-style" href="{{url_for('signup')}}">Log in/Sign Up</a></li>
+            {% endif %}
+        </ul>
     </header>
 
     <main class="container">
