@@ -49,3 +49,34 @@
    .popular img {
        height: 420px;
    }
+   /* films*/
+
+   #film-img {
+       width: 250px;
+       height: 350px;
+       box-shadow: 2px 2px 4px #000000;
+   }
+
+   .film-content {
+       text-align: center;
+       background-color: rgb(221, 201, 201);
+       box-shadow: 2px 2px 4px #000000;
+       width: 250px;
+   }
+
+   .film-text {
+       text-align: justify;
+   }
+
+   .film-row {
+       padding: 20px 20px 20px 20px;
+   }
+   /*profile image starts here*/
+   #profile-image {
+       display: inline;
+       margin-top: 15px;
+       border: outset;
+       float: left;
+       width: 400px;
+       height: 400px;
+   }
