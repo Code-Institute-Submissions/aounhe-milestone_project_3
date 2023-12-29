@@ -1,6 +1,7 @@
-from flask import render_template, request, redirect, url_for
+from flask import render_template, request, redirect, url_for, flash
 from filmmanager import app, db
 from filmmanager.models import Film, Review, Users
+from werkzeug.security import generate_password_hash, check_password_hash
 
 
 @app.route("/")
