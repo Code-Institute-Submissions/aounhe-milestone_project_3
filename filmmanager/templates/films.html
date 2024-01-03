@@ -1,15 +1,36 @@
-{% extends "base.html" %}
-
+{% extends "base.html" %} 
 {% block content %}
+<h1 class="light-blue-text text-darken-4 center-align">
+  Your favourite film is here
+</h1>
 
-
-<h3 class="light-blue-text text-darken-4 center-align">films</h3>
-
-<div class="row">
-    <div class="col s12 center-align">
-        <a href="{{ url_for('add_review') }}" class="btn-large light-blue darken-2">
-            Add review <i class="fas fa-plus-square right"></i>
-        </a>
+{% for film in films %}
+<div class="container">
+  <div class="row film-row">
+    <div class="col s12 m6 l6">
+      <img class="film-img" src="{{film.image}}" alt="movies" draggable="false"/>
     </div>
+    <div class="col s12 m6 l6 film-content">
+      <!--films details added in a for loop-->
+      <h5>{{ film.title}}</h5>
+      <h6>{{ film.director}}</h6>
+      <p>Id:{{ film.id_film}}</p>
+      <p>Release Date: {{film.year}}</p>
+      <p>Genre: {{film.genre}}</p>
+      <details class="film-text">
+        <summary>{{film.overview}}</summary>
+        <p>Reviews:</p>
+        <!-- if the review id is the same as film review, 
+                then it will add the comment to the right film-->
+        {% for review in reviews %} 
+        {% if review.film_id == film.id_film %}
+        <p>{{review.users_review}}</p>
+        <p>{{review.review_text}}</p>
+        {%endif%} 
+        {% endfor %}
+      </details>
+    </div>
+  </div>
 </div>
+{% endfor %} 
 {% endblock %}
