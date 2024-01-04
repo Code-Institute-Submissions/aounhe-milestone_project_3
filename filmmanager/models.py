@@ -49,10 +49,23 @@ class Film(db.Model):
         "Review", backref="film", cascade="all, delete", lazy=True)
     image = db.Column(db.String)
 
+
 def __repr__(self):
     # __rep__ to represent itself in the form of a string
     return "#{0} - title: {1} | image: {2}".format
     (self.id_film, title, director, year, genre, overview, film_reviews)
 
+#tried to enter data manully
+The_Hunger_Games = Film(
 
+    id_film="86918",
+    title="The Hunger Games",
+    director="Francis Lawrence",
+    year="2023-11-17",
+    genre="Drama",
+    overview="64 years before he becomes the tyrannical president of Panem, Coriolanus Snow sees a chance for a change in fortunes when he mentors Lucy Gray Baird, the female tribute from District 12.",
+    image="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ePquoeNxJ6vg8U7iSjRAZ2KdztX.jpg"
+)
 
+# db.session.add(The_Hunger_Games)
+# db.session.commit()
