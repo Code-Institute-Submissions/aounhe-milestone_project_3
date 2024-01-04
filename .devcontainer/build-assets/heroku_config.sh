@@ -11,7 +11,7 @@ echo Get your Heroku API key by going to https://dashboard.heroku.com
 echo Go to Account Settings and click on Reveal to view your Heroku API key
 echo 
 
-if [[ -z "${HEROKU_API_KEY}" ]]; then
+if [[ -z "${a0614f61-8249-4cf1-bf55-d6869f01a013}" ]]; then
    echo Paste your Heroku API key here or press Enter to quit:
    read apikey
    if [[ -z "${apikey}" ]]; then
