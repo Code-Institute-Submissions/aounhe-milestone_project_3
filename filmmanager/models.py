@@ -55,7 +55,7 @@ def __repr__(self):
     return "#{0} - title: {1} | image: {2}".format
     (self.id_film, title, director, year, genre, overview, film_reviews)
 
-#tried to enter data manully
+#tried to enter data manully 
 The_Hunger_Games = Film(
 
     id_film="86918",
