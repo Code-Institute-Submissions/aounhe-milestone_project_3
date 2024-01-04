@@ -87,11 +87,11 @@ def signin():
 
     return render_template("signin.html")
 
-
+#logout 
 @app.route('/logout')
 def logout():
-    session.pop('username', None)
-    return redirect(url_for('index'))
+    session.clear()
+    return render_template("index.html")
 
 
 
