@@ -67,5 +67,5 @@ The_Hunger_Games = Film(
     image="https://www.themoviedb.org/t/p/w600_and_h900_bestv2/ePquoeNxJ6vg8U7iSjRAZ2KdztX.jpg"
 )
 
-# db.session.add(The_Hunger_Games)
-# db.session.commit()
+db.session.add(The_Hunger_Games)
+db.session.commit()
