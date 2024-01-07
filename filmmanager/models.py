@@ -138,7 +138,7 @@ Freelance = Film(
 )
 db.session.add(The_Hunger_Games)
 db.session.add(Aquaman_and_the_Lost_Kingdom)
-db.session.add(Silent_Nights)
+db.session.add(Silent_Night)
 db.session.add(The_Family_Plan)
 db.session.add(Wonka)
 db.session.add(Chicken_Run_Dawn_of_the_Nugget)
