@@ -4,7 +4,7 @@
 
 Build a film review website.
 
-
+<img src= filmmanager/static/images/responsive.png>
 
 ### External User Goals
 
@@ -59,7 +59,7 @@ Everytime I was typing psql in the terminal to get to my database, I was receivi
 
 **Trying to insert values to a table:**
 
-While testing my tables by adding new values, I encountered an error in my terminal: "sqlalchemy.exc.InvalidRequestError: When initializing mapper mapped class Users->users, expression 'Review' failed to locate a name ('Review'). If this is a class name, consider adding this relationship() to the -class 'filmmanager.models.Users'- class after both dependent classes have been defined." I resolved it by rearranging the tables. The first table should have been Review, followed by Users and Book. Python reads the files from top to bottom, so it does not recognize something exists until it reaches that point in the file.
+While testing my tables by adding new values, I encountered an error in my terminal: "sqlalchemy.exc.InvalidRequestError: When initializing mapper mapped class Users->users, expression 'Review' failed to locate a name ('Review'). If this is a class name, consider adding this relationship() to the -class 'filmmanager.models.Users'- class after both dependent classes have been defined." I resolved it by rearranging the tables. The first table should have been Review, followed by Users and Film. Python reads the files from top to bottom, so it does not recognize something exists until it reaches that point in the file.
 
 **Trying to create an User login**
 
@@ -118,7 +118,7 @@ You can fork a GitHub Repository to make a copy of the original repository to vi
 5. Type git clone, and paste the link you copied in step
 6. Press Enter to have the local clone created.
 
-[Web link once deployed](https://we-love-reading-ae7806d31b04.herokuapp.com/)
+[Web link once deployed](https://filmmanager2-5f027f89de0f.herokuapp.com/)
 
 ### HEROKU and ELEPHANTSQL
 
@@ -209,10 +209,13 @@ Now that you have your database and code in your IDE configured, we will add it 
 
 ## HTML AND CSS VALIDATOR
 
+<img src= filmmanager/static/images/html-validator.png>
+
+<img src= filmmanager/static/images/css-validator.png>
 
 ### LIGHTHOUSE
 
-
+<img src= filmmanager/static/images/lighthouse.png>
 
 ## CREDITS
 
@@ -234,3 +237,10 @@ All the code that I have used to create this website was taken from Code Institu
 
 - Fonts used are RocknRoll One.
 
+[stackoverflow](https://stackoverflow.com/)
+
+- is a public platform where i can find and contribute answers to technical challenges.
+  
+[codeinstitute](https://codeinstitute.net/) 
+
+- Relational Database Management Systems.
